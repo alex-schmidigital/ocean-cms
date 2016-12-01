@@ -1,0 +1,31 @@
+<div class="media-library">
+  <div class="upload-button">
+    <input type="file"
+          ngFileSelect
+          [options]="options"
+          (onUpload)="handleUpload($event)"
+          class="file-upload-icon">
+    <button md-mini-fab color="primary"><md-icon>file_upload</md-icon></button>
+  </div>
+  <!-- drag & drop file example-->
+  <style>
+    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+  </style>
+  <div ngFileDrop
+      [options]="options"
+      (onUpload)="handleUpload($event)"
+      [ngClass]="{'file-over': hasBaseDropZoneOver}"
+      (onFileOver)="fileOverBase($event)">
+  </div>
+  <div class="image-container">
+    <div class="media-card-container col-sm-4" *ngFor="let mediaItem of media$ | async; let i = index;">
+      <md-card>
+        <img md-card-image [src]="apiUrl + mediaItem.url">
+        <md-card-actions align="end">
+              <button md-mini-fab color="warn" (click)="deleteMedia(mediaItem)" ><md-icon>delete_forever</md-icon></button>
+              <button md-mini-fab color="primary" (click)="select(mediaItem)" *ngIf="embedded"><md-icon>check</md-icon></button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>

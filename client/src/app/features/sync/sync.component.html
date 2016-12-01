@@ -1,0 +1,12 @@
+<md-card id="create-post-card">
+   <md-card-title><md-input #title placeholder="Title"></md-input></md-card-title>   
+   <img md-card-image [src]="postImage">
+   <md-card-content>
+        <div id="editor"></div>
+   </md-card-content>
+   <md-card-actions>
+        <button md-raised-button color="primary" (click)="createPost()">Speichern</button>
+   </md-card-actions>
+</md-card>
+
+<media-library [embedded]="true" (selectionChange)="setPostImage($event.value.url)"></media-library>

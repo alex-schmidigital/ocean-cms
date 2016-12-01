@@ -1,0 +1,22 @@
+<div id="posts-page">
+  <div class="card-container" *ngFor="let page of pages$ | async; let i = index" [ngClass]="{editing: editing[i]}">
+    <md-card>
+      <md-card-title class="title" [innerHtml]="page.title" *ngIf="!editing[i]"></md-card-title>
+      <md-card-title *ngIf="editing[i]">
+        <md-input [value]="page.title" #titleInput></md-input> 
+      </md-card-title>
+      <img md-card-image [id]="'post-image-' + i" [src]="page.image">
+      <md-card class="media-library-wrap" [ngClass]="{active: mediaLibraryVisible && editing[i]}">
+        <media-library [embedded]="true" (selectionChange)="switchImage(i, $event.value.url); edit(page, i)"></media-library>
+      </md-card>
+      <md-card-content class="content" [id]="'content-area-' + i" [innerHtml]="page.content">
+      </md-card-content>
+      <md-card-actions align="end">
+          <button md-mini-fab color="primary" (click)="edit(page, i)" *ngIf="!editing[i]"><md-icon>mode_edit</md-icon></button>
+          <button md-mini-fab class="save-button" (click)="edit(page, i)" *ngIf="editing[i]"><md-icon>check</md-icon></button>
+          <button md-mini-fab color="primary" (click)="toggleMediaLibrary()" *ngIf="editing[i]"><md-icon>photo-library</md-icon></button>
+          <button md-mini-fab color="warn" (click)="deletePost(page)" *ngIf="editing[i]"><md-icon>delete_forever</md-icon></button>
+    </md-card-actions>
+    </md-card>
+  </div>
+</div>

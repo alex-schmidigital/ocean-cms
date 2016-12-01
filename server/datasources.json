@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "db.json"
+  },
+  "uploads": {
+    "name": "uploads",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./uploads"
+  }
+}

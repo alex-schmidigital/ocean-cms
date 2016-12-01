@@ -1,0 +1,17 @@
+<h1>Beispielanmeldedaten:</h1>
+<h3>Email: bender@schmidigital.de</h3>
+<h3>Passwort: xmfm3ww</h3>
+<form>
+  <div class="group">
+    <md-input placeholder="Email" [(ngModel)]="email" name="email"></md-input>
+  </div>
+  <div class="group">
+    <md-input placeholder="Password" [(ngModel)]="password" type="password" name="password"></md-input>
+  </div>
+  <button type="button" class="button buttonBlue" (click)="login()">Login
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
+  <button type="button" class="button buttonBlue" (click)="logout()">Logout
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
+</form>

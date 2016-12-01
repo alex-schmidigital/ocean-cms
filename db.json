@@ -1,0 +1,45 @@
+{
+  "ids": {
+    "User": 2,
+    "AccessToken": 48,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Page": 52,
+    "file": 36
+  },
+  "models": {
+    "User": {
+      "1": "{\"password\":\"$2a$10$N5mRxXkN86.9Dnfk.RtUbez8oGv7MqOtnlOtou5BIAPGZRWf.EQI2\",\"email\":\"bender@schmidigital.de\",\"id\":1}"
+    },
+    "AccessToken": {
+      "sZhkEcGGQ18hOqJQDKwGzPaVSSCTiMBs73FnIBJPMI3Rwh8woHME0FV61DVRSIgX": "{\"id\":\"sZhkEcGGQ18hOqJQDKwGzPaVSSCTiMBs73FnIBJPMI3Rwh8woHME0FV61DVRSIgX\",\"ttl\":1209600,\"created\":\"2016-11-25T21:24:24.386Z\",\"userId\":1}",
+      "9yPj0H5TUhV5siQERImm2yaxXdxS6eiljYgUlpwdGW0PcJvLDFcLYmHkL6UnF8Ik": "{\"id\":\"9yPj0H5TUhV5siQERImm2yaxXdxS6eiljYgUlpwdGW0PcJvLDFcLYmHkL6UnF8Ik\",\"ttl\":1209600,\"created\":\"2016-11-25T21:28:30.803Z\",\"userId\":1}",
+      "DHKSTj7DEjWucBYpkFPTE3qltqTd4vEBUu3lQTortDw8lE0jhqQCANOBFT0zCeF5": "{\"id\":\"DHKSTj7DEjWucBYpkFPTE3qltqTd4vEBUu3lQTortDw8lE0jhqQCANOBFT0zCeF5\",\"ttl\":1209600,\"created\":\"2016-11-25T21:52:20.862Z\",\"userId\":1}",
+      "DMsTKJLQU7SEBZGXKw2CFiU1pzoO7Z4YBjVCvDBY18wnLutZV59USmULEMf1JVOE": "{\"id\":\"DMsTKJLQU7SEBZGXKw2CFiU1pzoO7Z4YBjVCvDBY18wnLutZV59USmULEMf1JVOE\",\"ttl\":1209600,\"created\":\"2016-11-25T21:52:24.591Z\",\"userId\":1}",
+      "lWST5TiAhXGQJ4PSBEAfNLQ3Ih2xX9FN4KtSRnK8zaE6CbuJcZRzwJTpBvCR8ZBn": "{\"id\":\"lWST5TiAhXGQJ4PSBEAfNLQ3Ih2xX9FN4KtSRnK8zaE6CbuJcZRzwJTpBvCR8ZBn\",\"ttl\":1209600,\"created\":\"2016-11-25T21:58:30.337Z\",\"userId\":1}",
+      "pLhAtBP3Xf3UgnErDzpimdIacbqKTyLx54Fj9fzImFknOtXSQWLkkmMXEpeTXVvV": "{\"id\":\"pLhAtBP3Xf3UgnErDzpimdIacbqKTyLx54Fj9fzImFknOtXSQWLkkmMXEpeTXVvV\",\"ttl\":1209600,\"created\":\"2016-11-25T22:17:18.383Z\",\"userId\":1}",
+      "TLJU47dD5DoLMWt5Cy7LNmyPWuTH90TDlqIW5EIZCfvLOIB1M9cSunFk1zHoffAz": "{\"id\":\"TLJU47dD5DoLMWt5Cy7LNmyPWuTH90TDlqIW5EIZCfvLOIB1M9cSunFk1zHoffAz\",\"ttl\":1209600,\"created\":\"2016-11-25T23:50:26.859Z\",\"userId\":1}",
+      "Tit7WBiHNyKsJHBKzIzIKHaekUkojv9A7EDvgNTkx2vDqzCTghcPX54O0R7J3Acw": "{\"id\":\"Tit7WBiHNyKsJHBKzIzIKHaekUkojv9A7EDvgNTkx2vDqzCTghcPX54O0R7J3Acw\",\"ttl\":1209600,\"created\":\"2016-11-26T10:34:55.358Z\",\"userId\":1}",
+      "9BbGzkEugW1J7UkkFcKwPN8nzGES2nFpKJ7BInoGONAeHPaQSRcXqZLGWjpHnSJX": "{\"id\":\"9BbGzkEugW1J7UkkFcKwPN8nzGES2nFpKJ7BInoGONAeHPaQSRcXqZLGWjpHnSJX\",\"ttl\":1209600,\"created\":\"2016-11-26T11:08:06.589Z\",\"userId\":1}",
+      "ENpWe57sRSBHgQYozP2mC2lRmWhq31FKwV3buuK3oMw6UbcZAIhC1vQI2fWOcfHT": "{\"id\":\"ENpWe57sRSBHgQYozP2mC2lRmWhq31FKwV3buuK3oMw6UbcZAIhC1vQI2fWOcfHT\",\"ttl\":1209600,\"created\":\"2016-11-26T13:58:54.696Z\",\"userId\":1}",
+      "4DTkUOcWZqV4fMl0TeQ1fXjCkHuEeT6hopRNaaIHFnv9FBoTdLsfKTEZKjmTsiRp": "{\"id\":\"4DTkUOcWZqV4fMl0TeQ1fXjCkHuEeT6hopRNaaIHFnv9FBoTdLsfKTEZKjmTsiRp\",\"ttl\":1209600,\"created\":\"2016-11-27T14:22:20.218Z\",\"userId\":1}",
+      "DB9TbWwrMbvqo0dHCF24mrYRwQdiDLxEN6HfLY0woYgEPQCuwqkVDTwaTHBMq9m2": "{\"id\":\"DB9TbWwrMbvqo0dHCF24mrYRwQdiDLxEN6HfLY0woYgEPQCuwqkVDTwaTHBMq9m2\",\"ttl\":1209600,\"created\":\"2016-11-30T00:33:05.272Z\",\"userId\":1}",
+      "7pfbaUsDhlMqNvMVnbbcK4vzRcWWIgNAXzkBcfDFO6mHKYyxc8DdGAxC9NgnF0Al": "{\"id\":\"7pfbaUsDhlMqNvMVnbbcK4vzRcWWIgNAXzkBcfDFO6mHKYyxc8DdGAxC9NgnF0Al\",\"ttl\":1209600,\"created\":\"2016-12-01T12:20:01.894Z\",\"userId\":1}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Page": {
+      "49": "{\"title\":\"Ein schöner Wintertag\",\"content\":\"<p>Dies ist ein Beispielbeitrag für meine Masterarbeit.</p><p>Das System zu bedienen ist <strong>kinderleicht</strong> und macht immer wieder <strong>Spaß</strong></p>\",\"image\":\"http://localhost:3000/api/containers/container1/download/mitarbeiter4.jpg\",\"owner\":1,\"id\":49}",
+      "50": "{\"title\":\"Hallo mal wieder\",\"content\":\"<p>Jetzt wird es doch irgendwie immer besser</p>\",\"image\":\"http://localhost:3000/api/containers/container1/download/mitarbeiter4.jpg\",\"owner\":1,\"id\":50}",
+      "51": "{\"title\":\"Hallo\",\"content\":\"<p>Hier ist ein Post</p>\",\"image\":\"http://localhost:3000/api/containers/container1/download/zahlen2.jpg\",\"owner\":1,\"id\":51}"
+    },
+    "file": {
+      "26": "{\"name\":\"mitarbeiter3.jpg\",\"type\":\"image/jpeg\",\"url\":\"/api/containers/container1/download/mitarbeiter3.jpg\",\"container\":\"container1\",\"id\":26}",
+      "28": "{\"name\":\"zahlen2.jpg\",\"type\":\"image/jpeg\",\"url\":\"/api/containers/container1/download/zahlen2.jpg\",\"container\":\"container1\",\"id\":28}",
+      "32": "{\"name\":\"mitarbeiter6.jpg\",\"type\":\"image/jpeg\",\"url\":\"/api/containers/container1/download/mitarbeiter6.jpg\",\"container\":\"container1\",\"id\":32}",
+      "34": "{\"name\":\"mitarbeiter4.jpg\",\"type\":\"image/jpeg\",\"url\":\"/api/containers/container1/download/mitarbeiter4.jpg\",\"container\":\"container1\",\"id\":34}"
+    }
+  }
+}
