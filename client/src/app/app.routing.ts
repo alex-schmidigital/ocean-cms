@@ -10,7 +10,7 @@ export const routes: Routes = [
   { path: 'lazy', loadChildren: './features/lazy/index#LazyModule' },
   { path: 'login', loadChildren: './features/login/index#LoginModule' },
   { path: 'media', loadChildren: './features/media/index#MediaModule' },
-  { 
+  {
     path: 'sync',
     loadChildren: './features/sync/index#SyncModule?sync=true',
     canActivate: [AuthGuard] },

@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es5", "dom"],
+    "lib": ["dom", "es6", "es2015", "es2016", "es2017"],
     "noEmitHelpers": true,
     "skipDefaultLibCheck": true,
     "pretty": true,
@@ -15,7 +17,9 @@
   },
   "exclude": [
     "node_modules",
-    "src/compiled"
+    "compiled",
+    "e2e/**/*.ts",
+    "src/main.browser.aot.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true,

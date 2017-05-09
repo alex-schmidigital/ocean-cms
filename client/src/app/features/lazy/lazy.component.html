@@ -3,7 +3,9 @@
     <md-card>
       <md-card-title class="title" [innerHtml]="page.title" *ngIf="!editing[i]"></md-card-title>
       <md-card-title *ngIf="editing[i]">
-        <md-input [value]="page.title" #titleInput></md-input> 
+        <md-input-container >
+          <input mdInput #titleInput [value]="page.title">
+        </md-input-container>
       </md-card-title>
       <img md-card-image [id]="'post-image-' + i" [src]="page.image">
       <md-card class="media-library-wrap" [ngClass]="{active: mediaLibraryVisible && editing[i]}">

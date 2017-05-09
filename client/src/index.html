@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Angular 2 App</title>
+	<title>Ocean CMS</title>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -19,12 +19,11 @@
 		Loading...
 	</my-app>
 	<script type="text/javascript" src="hammer.min.js"></script>
-	<script type="text/javascript" src="modernizer-touch-events.min.js"></script>
 	<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=console.*,Intl.~locale.en&gated=1"></script>
-	<div id="str-dlls">
-		<%= '<' %>script src="/polyfill.dll.js"<%= '>' %><%= '<' %>/script<%= '>' %>
-		<%= '<' %>script src="/vendor.dll.js"<%= '>' %><%= '<' %>/script<%= '>' %>
-	</div>
-	<script src="/index.js"></script>
+	<% if (htmlWebpackPlugin.options.metadata.isDevServer) { %>
+  <!-- DLL files -->
+		<script src="/polyfill.dll.js"></script>
+		<script src="/vendor.dll.js"></script>
+  <% } %>
 </body>
 </html>

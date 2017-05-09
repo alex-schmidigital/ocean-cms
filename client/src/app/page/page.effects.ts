@@ -74,6 +74,7 @@ export class PageEffects {
 
   @Effect() loadPages$ = this.actions$
     .ofType(PageActions.LOAD_PAGES)
+    .do(x => console.log('REEEAAAL'))
     .switchMap((post) =>  this.pageService.loadAll())
       .mergeMap((res: any) => Observable.of(
         this.pageActions.loadPagesSuccess(res)

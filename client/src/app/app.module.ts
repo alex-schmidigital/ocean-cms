@@ -1,9 +1,9 @@
-/** 
- * This module is the entry for your App when NOT using universal.
- * 
+/**
+ * This module is the entry for your App.
+ *
  * Make sure to use the 3 constant APP_ imports so you don't have to keep
  * track of your root app dependencies here. Only import directly in this file if
- * there is something that is specific to the environment.  
+ * there is something that is specific to the environment.
  */
 
 import { ApplicationRef, NgModule } from '@angular/core';
@@ -15,6 +15,7 @@ import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularcla
 import { Store } from '@ngrx/store';
 
 import { APP_DECLARATIONS } from './app.declarations';
+import { APP_ENTRY_COMPONENTS } from './app.entry-components';
 import { APP_IMPORTS } from './app.imports';
 import { APP_PROVIDERS } from './app.providers';
 
@@ -27,10 +28,11 @@ import { AppState } from './reducers';
     AppComponent,
     APP_DECLARATIONS
   ],
+  entryComponents: [APP_ENTRY_COMPONENTS],
   imports: [
     APP_IMPORTS,
     BrowserModule,
-    HttpModule
+    HttpModule,
   ],
   bootstrap: [AppComponent],
   providers: [APP_PROVIDERS, AuthGuard]

@@ -6,22 +6,22 @@ export const views: Object[] = [
   },
   {
     name: 'Posts',
-    icon: 'file_download',
+    icon: 'insert_drive_file',
     link: ['lazy']
   },
   {
     name: 'Login',
-    icon: 'file_download',
+    icon: 'person',
     link: ['login']
   },
   {
     name: 'Create',
-    icon: 'done',
+    icon: 'create',
     link: ['sync']
   },
   {
     name: 'Media',
-    icon: 'done',
+    icon: 'perm_media',
     link: ['media']
   },
   {

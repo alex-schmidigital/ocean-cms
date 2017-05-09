@@ -3,10 +3,14 @@
 <h3>Passwort: xmfm3ww</h3>
 <form>
   <div class="group">
-    <md-input placeholder="Email" [(ngModel)]="email" name="email"></md-input>
+    <md-input-container style="width:100%">
+      <input mdInput placeholder="Email" [(ngModel)]="email" name="email" />
+    </md-input-container>
   </div>
   <div class="group">
-    <md-input placeholder="Password" [(ngModel)]="password" type="password" name="password"></md-input>
+    <md-input-container style="width:100%">
+      <input mdInput placeholder="Password" [(ngModel)]="password" type="password" name="password" />
+    </md-input-container>
   </div>
   <button type="button" class="button buttonBlue" (click)="login()">Login
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>

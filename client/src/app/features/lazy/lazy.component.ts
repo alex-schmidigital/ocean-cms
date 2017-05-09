@@ -80,7 +80,7 @@ export class LazyComponent {
     this.pages$.first().subscribe(pages => {
       if (
           pages[index].content !== postData.content
-        ||pages[index].title !== postData.title 
+        ||pages[index].title !== postData.title
         ||pages[index].image !==postData.image
         ) {
           this.store.dispatch(this.pageActions.patchPost(page.id, postData));

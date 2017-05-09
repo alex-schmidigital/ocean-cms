@@ -1,4 +1,4 @@
-import { 
+import {
   Component,
   AfterViewInit,
   ElementRef,
@@ -17,16 +17,16 @@ import { quill, BACKEND_BASE_URL } from '../../services/constants';
   styleUrls: [
     './sync.style.css'
   ],
-  encapsulation: ViewEncapsulation.None  
+  encapsulation: ViewEncapsulation.None
 })
 
 export class SyncComponent implements AfterViewInit {
 
   editorElement: HTMLElement;
 
-  postImage: string = ''
+  postImage: string = '';
 
-  @ViewChild('title') title: HTMLInputElement;
+  @ViewChild('titleInput') titleInput: any;
 
   private quill: any;
 
@@ -50,7 +50,7 @@ export class SyncComponent implements AfterViewInit {
 
   createPost() {
     let page: Page = {
-      title: this.title.value,
+      title: this.titleInput.nativeElement.value,
       content: this.editorElement.querySelector('.ql-editor').innerHTML,
       image: this.postImage
     }

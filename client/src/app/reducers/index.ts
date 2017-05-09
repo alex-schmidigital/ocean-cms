@@ -8,6 +8,12 @@ import { userReducer, UserState } from '../user/user.reducer';
 import { pageReducer, PageState } from '../page/page.reducer';
 import { mediaReducer, MediaState } from '../media/media.reducer';
 
+import * as fromUser from '../user/user.reducer';
+
+const modules = {
+  'user': fromUser
+};
+
 export interface AppState {
   router: RouterState;
   user: UserState;
@@ -32,13 +38,27 @@ function stateSetter(reducer: ActionReducer<any>): ActionReducer<any> {
   };
 }
 
+const resetOnLogout = (reducer: Function) => {
+  return function (state, action) {
+    let newState;
+    if (action.type === '[User] Logout Success') {
+      newState = Object.assign({}, state);
+      Object.keys(modules).forEach((key) => {
+        newState[key] = modules[key]['initialState'];
+      });
+    }
+    return reducer(newState || state, action);
+  };
+};
+
 const DEV_REDUCERS = [stateSetter, storeFreeze];
-if (['logger', 'both'].includes(STORE_DEV_TOOLS)) { // set in constants.js file of project root
+// set in constants.js file of project root
+if (['logger', 'both'].indexOf(STORE_DEV_TOOLS) !== -1 ) {
     DEV_REDUCERS.push(storeLogger());
 }
 
-const developmentReducer = compose(...DEV_REDUCERS, combineReducers)(reducers);
-const productionReducer = combineReducers(reducers);
+const developmentReducer = compose(...DEV_REDUCERS, resetOnLogout, combineReducers)(reducers);
+const productionReducer = compose(resetOnLogout, combineReducers)(reducers);
 
 export function rootReducer(state: any, action: any) {
   if (ENV !== 'development') {
